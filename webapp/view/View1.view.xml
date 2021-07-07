@@ -1,0 +1,104 @@
+<mvc:View
+    controllerName="generictilesassignment.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:C="generictilesassignment.Control"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+					  
+			      <VBox>
+					<HBox id="hbox">
+					<items>
+				
+				<C:Color class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" 
+				press="press" backgroundImage="test-resources/sap/m/demokit/sample/GenericTileAsFeedTile/images/NewsImage1.png" >
+		        <TileContent unit="Unit"  footer="August 21, 2016">
+			        <NumericContent value="1762" icon="sap-icon://line-charts" withMargin="false" />
+		        </TileContent>
+	            </C:Color>
+
+	            <C:Color class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press" >
+		        <TileContent unit="Unit"  footer="August 21, 2016">
+			        <NumericContent value="12" withMargin="false" />
+		        </TileContent>
+	           </C:Color>
+			   </items>
+			</HBox>
+		</VBox>
+
+					<VBox>
+					<HBox id="HBox2">
+						<items>
+								<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout">
+		<tiles>
+			<GenericTile
+				backgroundImage="test-resources/sap/m/demokit/sample/GenericTileAsFeedTile/images/NewsImage1.png"
+				frameType="TwoByOne" press="press">
+				<TileContent footer="August 21, 2016">
+					<NewsContent
+						contentText="Wind Map: Monitoring Real-Time and Fore-casted Wind Conditions across the Globe"
+						subheader="Today, SAP News" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile
+				backgroundImage="test-resources/sap/m/demokit/sample/GenericTileAsFeedTile/images/NewsImage2.png"
+				frameType="TwoByOne" press="press">
+				<TileContent footer="August 21, 2016">
+					<NewsContent
+						contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com"
+						subheader="Today, SAP News" />
+				</TileContent>
+			</GenericTile>
+		</tiles>
+	</SlideTile>
+	<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" id="slide">
+		<tiles>
+			<GenericTile
+				backgroundImage="test-resources/sap/m/images/NewsImage1.png"
+				frameType="TwoByOne" press="press">
+				<TileContent footer="August 21, 2016">
+					<NewsContent
+						contentText="Wind Map: Monitoring Real-Time and Fore-casted Wind Conditions across the Globe"
+						subheader="Today, SAP News" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile
+				backgroundImage="test-resources/sap/m/demokit/sample/GenericTileAsFeedTile/images/NewsImage1.png"
+				frameType="TwoByOne" press="press">
+				<TileContent footer="August 21, 2016">
+					<NewsContent
+						contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com"
+						subheader="Today, SAP News" />
+				</TileContent>
+			</GenericTile>
+		</tiles>
+	</SlideTile>
+	
+						</items>
+						
+					</HBox>
+					</VBox>
+		
+		
+					</content>
+					<footer>
+			
+				
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button  text="Create" press="onOpenDialog"/>
+				<Button  text="Slide" press="onOpenDialog2"/>
+				
+			</OverflowToolbar>
+		
+		</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

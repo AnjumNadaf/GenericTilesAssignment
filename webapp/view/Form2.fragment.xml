@@ -1,0 +1,61 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:sf="sap.ui.layout.form" 	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified" xmlns:C="generictilesassignment.Control">
+	<Dialog id="dialog2" title="Add Generic Tile" titleAlignment="Center" afterClose="onAfter">
+		<content>
+			<sf:SimpleForm id="sform2" editable="true"  >
+               <sf:content>
+               <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout">
+		         <tiles>
+			   <C:Color id="tile2" class="tileLayout" header="Title" subheader="Description" backgroundImage="test-resources/sap/m/images/NewsImage1.png" frameType="TwoByOne" >
+		        <TileContent unit="Unit"  footer="August 21, 2016">
+			        <NumericContent value="1762" icon="sap-icon://line-charts" withMargin="false" contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" />
+		        </TileContent>
+	            </C:Color>
+                <C:Color id="tile3" class="tileLayout" header="Title" subheader="Description" bgColor="#ffffff" frameType="TwoByOne">
+		        <TileContent unit="Unit" footer="August 21, 2016">
+			        <NumericContent value="1762" icon="sap-icon://line-charts" withMargin="false" contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" />
+		        </TileContent>
+	            </C:Color>
+                </tiles>
+	            </SlideTile>
+				
+				<Label text="Title"></Label>
+				<Input id="title2" placeholder="Enter Title" liveChange="addTitle2"></Input>
+				<Label text="Description"></Label>
+				<Input id="descrp2" placeholder="Enter Description" liveChange="addDescrp2"></Input>
+				<Label labelFor="rbg4" text="Choose One" />
+		        <RadioButtonGroup id="rbg4" valueState="Success" >
+			        <RadioButton id="RB4-1" text="Color" select="onSelect2"/>
+			        <RadioButton id="RB4-2" text="Img" select="onSelect2"/>
+		        </RadioButtonGroup>
+				
+                 <Select id="selectid2" visible="false" change="onChangeColor2">
+					<items>
+						<core:Item key="#ff0000" text="Red" />
+						<core:Item key="#40ff00" text="Green"></core:Item>
+						<core:Item key="#0000ff" text="Blue"></core:Item>
+						<core:Item key="#ffff00" text="Yellow"></core:Item>
+						<core:Item key="#ffffff" text="White"></core:Item>
+					</items>
+					
+				</Select>
+				<Label></Label>
+				<u:FileUploader id="fileUploader2" visible="false"/>
+				<Button  id="upload2" text="Upload"  press="onUploadImage2" visible="false"/>
+			
+			
+				
+				<Label></Label>
+			   </sf:content>
+			    
+			</sf:SimpleForm>
+		</content>
+		<beginButton>
+		    
+		    <Button text="Submit" press="onCreateNewTile2"></Button>
+		</beginButton>
+		<endButton>
+			<Button text="Cancel" press="onClose2"></Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
